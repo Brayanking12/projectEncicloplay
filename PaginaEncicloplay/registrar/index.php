@@ -20,14 +20,22 @@
         </select>
         <h4>Numero de documento:</h4>
       <input class="controls" type="text" name="numero"  placeholder="Numero de Documento" required>
-     <h4>Nombre y apellido:</h4>
-      <input class="controls" type="text" name="nombre" placeholder="Nombre y Apellido" required>
+     <h4>Nombres:</h4>
+      <input class="controls" type="text" name="nombre" placeholder="Nombres" required>
+      <h4>Apellidos:</h4>
+      <input class="controls" type="text" name="apellido" placeholder=" Apellidos" required>
+      <select class="controls" name="genero" required>
+          <option value="Mujer">Mujer</option>
+          <option value="Hombre">Hombre</option>
+        </select>
+        <h4>Grado:</h4>
+      <input class="controls" type="text" name="grado" placeholder="¿En que grado estas?" required>
       <h4>contraseña:</h4>
       <input class="controls" type="Password" name="pass"  placeholder="pass" required>
       
 
         <input class="botons" type="submit"  value="Registrar"  name="registro">
-      <input class="botons" type="submit"  value="consultar"   >
+      <input class="botons" type="submit"  value="consultar" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required  >
 
     </form>
         <?php
