@@ -11,7 +11,7 @@ $pass=$_POST['pass'];
 
 
 //consulta
-$sql="SELECT COUNT(*) as contar from personas where  numrdoc='$numrdoc'  and  pass='$pass'";
+$sql="SELECT COUNT(*) as contar from personas where  numrdoc='$numrdoc' and  nombape='$nombape' and  pass='$pass'";
 $consulta=mysqli_query($conn,$sql);
 
 $lista=mysqli_fetch_array($consulta);
@@ -23,7 +23,7 @@ if($lista['contar']>0){
 
 
 }else{
-    die("Error de autenticacion");
+    die("Usuario y/o Contraseña!... Información de Usuario invalida");
 }
 
 
