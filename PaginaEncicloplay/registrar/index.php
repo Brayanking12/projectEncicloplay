@@ -55,8 +55,16 @@
 
           if(count($campos) >0){
             echo"<div class='error'>";
+            for($i =0; $i < count($campos); $i++){
+              echo"<li>".$campos[$i]."</li>";
+            }
           
+          }else{
+            echo"div class='correcto'>
+                   datos correctos ";
           }
+
+          echo"</div>";
 
 
         }
